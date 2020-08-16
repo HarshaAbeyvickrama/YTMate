@@ -1,0 +1,343 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>
+
+Youtube Mate
+</title>
+
+<style>
+
+/*--------------------------
+	Home btn Section
+--------------------------*/
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*--------------------------
+	SearchBar Section
+--------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border:0px solid grey;
+  float: left;
+  width: 80%;
+  background: #53ff1a;
+}
+
+form.example button {
+  float: left;
+  width: 4%;
+  padding: 10.5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 0px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+	
+
+	
+
+
+	
+
+/*--------------------*/
+
+	.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 80%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+	
+/*-------------------------
+	Commentstable Section
+--------------------------*/
+
+
+	.tbl-header{
+	background-color: rgba(255,255,255,0.3);
+	
+	}
+	
+	.tbl-content{
+	height:350px;
+	overflow-x:auto;
+	margin-top: 0px;
+	
+	}
+
+	h1{
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 15px;
+	}
+	
+	table{
+	width:100%;
+	table-layout:auto;
+	}
+	
+	
+	th{
+	padding: 20px ;
+	text-align: left;
+	font-weight: 800;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	}
+	td{
+	padding: 15px;
+	text-align: left;
+	vertical-align:middle;
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+	border-bottom: solid 1px rgba(255,255,255,0.1);
+	}
+
+
+
+
+
+	/* demo styles */
+
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+	body{
+	background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+	background: linear-gradient(to right, #25c481, #25b7c4);
+	font-family: 'Roboto', sans-serif;
+	}
+	section{
+	margin: 50px;
+	}
+
+
+	/* follow me template */
+	.made-with-love {
+	margin-top: 40px;
+	padding: 10px;
+	clear: left;
+	text-align: center;
+	font-size: 10px;
+	font-family: arial;
+	color: #fff;
+	}
+	.made-with-love i {
+	font-style: normal;
+	color: #F50057;
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+	}
+	.made-with-love a {
+	color: #fff;
+	text-decoration: none;
+	}
+	.made-with-love a:hover {
+	text-decoration: underline;
+	}
+
+
+	/* for custom scrollbar for webkit browser*/
+
+	::-webkit-scrollbar {
+		width: 6px;
+	} 
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	} 
+	::-webkit-scrollbar-thumb {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	}
+
+</style>
+
+<script src="https://apis.google.com/js/api.js"></script>	
+	
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+ <script src="js/fb1.js"></script>
+ <script src="js/script.js"></script>
+ <script src="js/YTv3.js"></script>
+ 
+<script>
+
+// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+	$(window).on("load resize ", function() {
+	var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+	$('.tbl-header').css({'padding-right':scrollWidth});
+	}).resize();
+
+</script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	
+
+</head>
+
+<body>
+
+<!-------------------------
+	SearchBar Section
+-------------------------->
+<section id "searchBarSection">
+<form class="example" >
+  <input type="text" id="videoLink" placeholder="Enter URL..." name="search" style="color:white;background-color:rgba(255,255,255,0.3)">
+  <button type="submit" id="searchBtn"  style="color:white;background-color:rgba(255,255,255,0.3)"><i class="fa fa-search"></i></button>
+  
+</form>
+
+</section>
+
+<!-------------------------
+	Commentstable Section
+-------------------------->
+
+<section id="Commentstable">
+  <!--for demo wrap-->
+  <h1>Comments</h1>
+  
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="table-data">
+        <!--<tr>
+		<td>1</td>
+		<td>qwertyuifbvhdvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisduaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabivbsdiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr><tr>
+		<td>12</td>
+		<td>qwertyuifbvhdbisdubivbsdivdsivnsdiovvinsivovns</td>
+		</tr>-->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-------------------------
+	Commentstable Section
+-------------------------->
+<section>
+<button onclick="closeWin()"class="btn" style="font-size: 30px;"><a href="index.html" class="fa fa-home">Home</a></button>
+</section>
+</body>
